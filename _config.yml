@@ -1,0 +1,25 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:  /algorithms/:title
+
+# Setup
+title:               Miho Maehara
+tagline:             'Back-end Engineer'
+description:         ''
+
+baseurl:             ''
+url:                 www.mihomaehara.com
+plugins:             [jekyll-paginate]
+
+paginate:            5
+paginate_path:       '/algorithms/page:num/'
+
+# About/contact
+author:
+  name:              Miho Maehara
+  url:               www.mihomaehara.com
+  email:             miho.maehara0625@gmail.com
+
+# Custom vars
+version:             1.0.0
