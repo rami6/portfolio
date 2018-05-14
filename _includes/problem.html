@@ -1,0 +1,27 @@
+
+{{ include.description }}
+
+<div class="problem-info">
+    <div>
+    {% for ex in include.example %}
+        {% if forloop.length == 1 %}
+            Example
+        {% elsif forloop.length > 1 %}
+            Example {{ forloop.index }}
+        {% endif %}
+        <ul>
+            <li>Input: {{ ex.input }}</li>
+            <li>Output: {{ ex.output }}</li>
+        </ul>
+    {% endfor %}
+    </div>
+
+    Note
+    <ul>
+    {% for note in include.note %}
+        <li>{{ note }}</li>
+    {% endfor %}
+    </ul>
+</div>
+
+<div style="text-align: right">(Source: <a href="{{ include.url }}"> {{ include.link }} </a>)</div>
