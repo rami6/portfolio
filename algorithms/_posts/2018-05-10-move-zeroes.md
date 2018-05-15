@@ -14,16 +14,8 @@ link: Move Zeroes - LeetCode
 link_url: https://leetcode.com/problems/move-zeroes/description/
 ---
 
-{% assign desc_var = page.description %}
-{% assign example_var = page.example %}
-{% assign note_var = page.note %}
-{% assign link_var = page.link %}
-{% assign url_var = page.link_url %}
-
-{% include problem.html description=desc_var example=example_var note=note_var link=link_var url=url_var %}
-
-<hr/>
 <div>Swift<span class="write-date"> - {{ page.date | date_to_string }}</span></div>
+
 {% highlight swift %}
 func moveZeroes(_ nums: inout [Int]) {
     var index = 0
