@@ -11,6 +11,14 @@ title: Algorithm
         {{ post.title }}
       </a>
     </h1>
+    {% assign desc_var = post.description %}
+    {% assign example_var = post.example %}
+    {% assign note_var = post.note %}
+    {% assign link_var = post.link %}
+    {% assign url_var = post.link_url %}
+
+    {% include problem.html description=desc_var example=example_var note=note_var link=link_var url=url_var %}
+
     {{ post.content }}
   </div>
   {% endfor %}
