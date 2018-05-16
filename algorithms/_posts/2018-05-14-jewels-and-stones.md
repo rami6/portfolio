@@ -19,19 +19,20 @@ link_url: https://leetcode.com/problems/jewels-and-stones/description/
 <div>Python<span class="write-date"> - {{ page.date | date_to_string }}</span></div>
 
 {% highlight Python %}
-def numJewelsInStones(self, J, S):
-    """
-    :type J: str
-    :type S: str
-    :rtype: int
-    """
-    count = 0
+class Solution:
+    def numJewelsInStones(self, J, S):
+        """
+        :type J: str
+        :type S: str
+        :rtype: int
+        """
+        count = 0
 
-    for stone in S:
-        for jewel in J:
-            if stone == jewel:
-                count += 1
-                break
-    
-    return count
+        for stone in S:
+            for jewel in J:
+                if stone == jewel:
+                    count += 1
+                    break
+        
+        return count
 {% endhighlight %}
