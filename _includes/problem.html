@@ -19,12 +19,14 @@
     {% endfor %}
     </div>
 
-    Note
-    <ul>
-    {% for note in include.note %}
-        <li>{{ note | markdownify | remove: '<p>' | remove: '</p>' }}</li>
-    {% endfor %}
-    </ul>
+    {% if include.note != null %}
+        Note
+        <ul>
+        {% for note in include.note %}
+            <li>{{ note | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
 </div>
 
 <div style="text-align: right; margin-bottom: 2em;" >(Source: <a href="{{ include.url }}"> {{ include.link }} </a>)</div>
