@@ -32,8 +32,7 @@ class LeagueTable:
         self.standings[player]['score'] += score
 
     def player_rank(self, rank):
-        score_sorted = OrderedDict(sorted(self.standings.items(), 
-        key=lambda t: t[1]['score'], reverse=True))
+        score_sorted = OrderedDict(sorted(self.standings.items(), key=lambda t: t[1]['score'], reverse=True))
         games_sorted = []
 
         i = 0
@@ -41,9 +40,7 @@ class LeagueTable:
             sub_list = [list(score_sorted.items())[i]]
             if i < len(score_sorted) - 1:
                 j = i + 1
-                while j < len(score_sorted) and 
-                list(score_sorted.items())[i][1]['score'] == 
-                list(score_sorted.items())[j][1]['score']:
+                while j < len(score_sorted) and list(score_sorted.items())[i][1]['score'] == list(score_sorted.items())[j][1]['score']:
                     sub_list.append(list(score_sorted.items())[j])
                     j += 1
 

@@ -190,6 +190,9 @@ pre code {
 }
 .highlight pre {
   margin-bottom: 0;
+   /* customized */
+   white-space: pre; 
+   overflow-x: auto;
 }
 
 /* Gist via GitHub Pages */
