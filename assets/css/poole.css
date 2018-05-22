@@ -174,7 +174,8 @@ pre {
 }
 pre code {
   padding: 0;
-  font-size: 100%;
+  /* customized (original: 100%) */
+  font-size: 90%;
   color: inherit;
   background-color: transparent;
 }
@@ -183,6 +184,9 @@ pre code {
 .highlight {
   margin-bottom: 1rem;
   border-radius: 4px;
+  /* customized */
+  margin-left: 0px;
+  margin-right: 0px;
 }
 .highlight pre {
   margin-bottom: 0;
