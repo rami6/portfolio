@@ -10,7 +10,7 @@ title: Algorithm
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ site.baseurl }}/{{ post.url }}">
+      <a href="{{ post.url }}">
         {{ post.title }}
       </a>
     </h1>
@@ -32,11 +32,15 @@ title: Algorithm
   <a class="pagination-item older" href="{{ site.baseurl }}/algorithms/page{{paginator.next_page}}">Older</a>
   {% else %}
   <span class="pagination-item older">Older</span>
-  {% endif %} {% if paginator.previous_page %} {% if paginator.page == 2 %}
-  <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
+  {% endif %} 
+  
+  {% if paginator.previous_page %} 
+    {% if paginator.page == 2 %}
+    <a class="pagination-item newer" href="{{ site.baseurl }}/algorithms/">Newer</a>
+    {% else %}
+    <a class="pagination-item newer" href="{{ site.baseurl }}/algorithms/page{{paginator.previous_page}}">Newer</a>
+    {% endif %} 
   {% else %}
-  <a class="pagination-item newer" href="{{ site.baseurl }}/algorithms/page{{paginator.previous_page}}">Newer</a>
-  {% endif %} {% else %}
   <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
