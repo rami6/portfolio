@@ -2,9 +2,12 @@
 layout: default 
 title: Algorithm 
 ---
+
+{% if page.url == '/algorithms/' %}
 <div class="message" style="border: solid; border-color: #999999; border-width: 2pt; color: black; margin-bottom: 2.5em;">
   These posts below are my history of challenges to algorithm problems!
 </div>
+{% endif %}
 
 <div class="posts">
   {% for post in paginator.posts %}
