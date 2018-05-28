@@ -5,19 +5,28 @@
 </div>
 
 <div class="problem-info">
-    <div>
-    {% for ex in include.example %}
-        {% if forloop.length == 1 %}
-            Example
-        {% elsif forloop.length > 1 %}
-            Example {{ forloop.index }}
-        {% endif %}
-        <ul>
-            <li>Input: {{ ex.input | markdownify | remove: '<p>' | remove: '</p>' }}</li>
-            <li>Output: {{ ex.output | markdownify | remove: '<p>' | remove: '</p>' }}</li>
-        </ul>
-    {% endfor %}
-    </div>
+    {% if include.example != null %}
+        <div>
+        {% for ex in include.example %}
+            {% if forloop.length == 1 %}
+                Example
+            {% elsif forloop.length > 1 %}
+                Example {{ forloop.index }}
+            {% endif %}
+
+            {% if ex.input == null %}
+            <ul>
+                <li>See source site</li>
+            </ul>
+            {% else %}
+            <ul>
+                <li>Input: {{ ex.input | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                <li>Output: {{ ex.output | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+            </ul>
+            {% endif %}
+        {% endfor %}
+        </div>
+    {% endif %}
 
     {% if include.note != null %}
         Note
