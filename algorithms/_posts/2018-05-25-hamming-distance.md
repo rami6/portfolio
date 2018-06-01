@@ -9,6 +9,7 @@ description:
 example:
     - input: x = 1, y = 4
       output: 2
+      explanation: <br>1   (0 **0** 0 **1**)<br>4   (0 **1** 0 **0**)<br>The above bold nums describe positions where the corresponding bits are different.
 note:
     - "0 ≤ `x`, `y` < 2<sup>31</sup>"
 link: Hamming Distance - LeetCode

@@ -22,6 +22,9 @@
             <ul>
                 <li>Input: {{ ex.input | markdownify | remove: '<p>' | remove: '</p>' }}</li>
                 <li>Output: {{ ex.output | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                {% if ex.explanation != null %}
+                <li>Explanation: {{ ex.explanation | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                {% endif %}
             </ul>
             {% endif %}
         {% endfor %}

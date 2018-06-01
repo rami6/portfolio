@@ -10,6 +10,8 @@ description:
 example:
     - input: words = ["gin", "zen", "gig", "msg"]
       output: 2
+      explanation: <br>The transformation of each word is:<br>"gin" -> "--...-."<br>"zen" -> "--...-."<br>"gig" -> "--...--."<br>"msg" -> "--...--."<br>There are 2 different transformations, "--...-." and "--...--.".
+
 note:
     - "The length of `words` will be at most `100`."
     - "Each `words[i]` will have length in range `[1, 12]`."
