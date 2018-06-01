@@ -10,8 +10,11 @@ description:
 example:
     - input: [[1,1,0],[1,0,1],[0,0,0]]
       output: [[1,0,0],[0,1,0],[1,1,1]]
+      explanation: "First reverse each row: [[0,1,1],[1,0,1],[0,0,0]]. Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]"
     - input: [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]
       output: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
+      explanation: "First reverse each row: [[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]]."
+Then invert the image: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
 note:
     - "`1 <= A.length = A[0].length <= 20`"
     - "`0 <= A[i][j] <= 1`"
