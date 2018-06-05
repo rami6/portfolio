@@ -41,7 +41,7 @@ body {
 }
 
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -575,4 +575,12 @@ a.pagination-item:hover {
 
 .write-date {
   color: #9a9a9a;
+}
+
+.subtitle {
+  color: #c0c0c0;
+}
+
+.section {
+  margin-bottom: 50px;
 }
