@@ -58,3 +58,5 @@ class Solution:
                     
         return nums
 {% endhighlight %}
+
+I realized that I need to learn bitwize operators while looking for the solutions. Bitwise operators are used in every good solution. I will start learning it now!
