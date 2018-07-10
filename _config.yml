@@ -23,3 +23,9 @@ author:
 
 # Custom vars
 version:             1.0.0
+
+defaults:
+  - scope:
+      path: "assets/image"
+    values:
+      image: true
