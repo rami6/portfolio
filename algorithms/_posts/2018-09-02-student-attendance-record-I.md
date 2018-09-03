@@ -50,3 +50,17 @@ class Solution(object):
 
         return True
 {% endhighlight %}
+
+After some research, I found the simple and efficient answer below:
+
+<div>Python<span class="write-date"> - {{ page.date | date_to_string }}</span></div>
+- Runtime: 20 ms, beats 100.00 % of python3 submissions.
+{% highlight python %}
+class Solution(object):
+    def checkRecord(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        return s.count('A') <= 1 and s.find('LLL') == -1
+{% endhighlight %}
